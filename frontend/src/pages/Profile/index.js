@@ -47,16 +47,16 @@ export default function Profile(){
 
             <form onSubmit={onSubmit}>
                 <strong>Nome:</strong>
-                <input name="name" onChange={onChange} value={user.name}></input>
+                <input name="name" onChange={onChange} value={user.name} required></input>
 
                 <strong>Email:</strong>
-                <input type="email" onChange={onChange} name="email" value={user.email}></input>
+                <input type="email" onChange={onChange} name="email" value={user.email} required></input>
 
                 <strong>Idade:</strong>
-                <input name="idade" onChange={onChange} value={user.idade}></input>
+                <input type="number" name="idade" onChange={onChange} value={user.idade} required></input>
 
                 <strong>Empresa:</strong>
-                <input name="empresa" onChange={onChange} value={user.empresa}></input>
+                <input name="empresa" onChange={onChange} value={user.empresa} required></input>
 
                 <div className="actions">
                     {/*Usa a classe Link em vez de "button" do html. Pode fazer da primeira ou segunda forma com useHistory, as duas linhas possuem a mesma funcionalidade*/}

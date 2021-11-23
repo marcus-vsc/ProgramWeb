@@ -42,7 +42,6 @@ module.exports = {
     return res.status(204).send();
   },
   async delete(req, res) {
-    console.log("Aaaaaaaaa")
     const { id } = req.params;
     await connection("bankAccount").where("id", id).delete();
     return res.status(204).send();

@@ -78,7 +78,7 @@ export default function Profile(){
                         <input name="agencia" onChange={onChange} value={bankAccount.agencia} readOnly></input></div>)
                     :
                     (<div><strong>Agência:</strong>
-                        <input name="agencia" onChange={onChange} value={bankAccount.agencia}></input></div>)
+                        <input name="agencia" onChange={onChange} value={bankAccount.agencia} required></input></div>)
                 }
 
                 {
@@ -87,13 +87,13 @@ export default function Profile(){
                         <input onChange={onChange} name="banco" value={bankAccount.banco} readOnly></input></div>)
                     :
                     (<div><strong>Banco:</strong>
-                        <input onChange={onChange} name="banco" value={bankAccount.banco}></input></div>)
+                        <input onChange={onChange} name="banco" value={bankAccount.banco} required></input></div>)
 
                 }
                 
 
                 <strong>Saldo:</strong>
-                <input type="number" name="saldo" onChange={onChange} value={bankAccount.saldo}></input>
+                <input type="number" name="saldo" onChange={onChange} value={bankAccount.saldo} required></input>
 
                 <div className="actions">
                     {/*Usa a classe Link em vez de "button" do html. Pode fazer da primeira ou segunda forma com useHistory, as duas linhas possuem a mesma funcionalidade*/}
